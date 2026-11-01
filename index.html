@@ -150,18 +150,26 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
 .gctl button{width:46px;height:46px;border-radius:50%;border:2px solid var(--m);background:#fff;color:var(--m);font-size:1.2rem;cursor:pointer;transition:.25s}
 .gctl button:hover{background:var(--m);color:#fff}
 .gcount{font:600 .9rem 'Poppins';color:var(--muted);min-width:70px;text-align:center}
+.dept{margin-bottom:14px}.dept small{display:block;font-weight:600;color:var(--muted);font-size:.76rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pair .btn,.hcard .pair .btn{width:100%;margin:0;padding:12px 8px;justify-content:center;font-size:.85rem}
+.band .depts{display:flex;gap:34px;justify-content:center;flex-wrap:wrap}.band .dept{min-width:290px;margin:0}.band .dept small{color:#f0d6d6}
+.more2{margin-top:auto}.more2 small{display:block;font:600 .72rem 'Poppins';letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.more2 div{display:flex;gap:8px}.more2 a{flex:1;text-align:center;padding:9px 6px;border:1.5px solid var(--m);border-radius:8px;font:600 .8rem 'Poppins';color:var(--m);transition:.25s}.more2 a:hover{background:var(--m);color:#fff}
+.fab .bd{position:absolute;top:-5px;right:-5px;background:#fff;color:var(--ink);font:700 .62rem 'Poppins';border-radius:10px;padding:1px 6px;box-shadow:0 2px 6px rgba(0,0,0,.3)}
+.links .btn-wa{white-space:nowrap}
+@media(max-width:640px){.fab{gap:9px}.fab a{width:50px;height:50px;font-size:1.3rem}.fab span:not(.x){display:none}.band .dept{min-width:100%}}
 </style>
 </head>
 <body>
 
-<div class="topbar"><div class="wrap"><span>📍 Dubai, United Arab Emirates</span><span><a href="tel:+971502961005">📞 +971 50 296 1005</a> &nbsp;|&nbsp; <a href="mailto:qiangshengtechnical@gmail.com">✉ qiangshengtechnical@gmail.com</a></span></div></div>
+<div class="topbar"><div class="wrap"><span>📍 Office No. 202, Al Muhairbi Building, Al Garhoud, Dubai, UAE</span><span><a href="tel:+97142349859">☎ Landline: +971 4 234 9859</a> &nbsp;|&nbsp; <a href="mailto:qiangshengtechnical@gmail.com">✉ qiangshengtechnical@gmail.com</a></span></div></div>
 
 <header><div class="wrap"><nav>
   <a href="#home" class="logo"><img class="logo-img" alt="Qiang Sheng logo"><span><b>Qiang Sheng</b><small>TECHNICAL SERVICES L.L.C</small></span></a>
   <button class="burger" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
   <div class="links">
     <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
-    <a class="btn btn-wa" style="padding:10px 20px" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 WhatsApp</a>
+    <a class="btn btn-wa" style="padding:10px 16px" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 Head Office</a><a class="btn btn-wa" style="padding:10px 16px" href="https://wa.me/971569175612?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 Sales</a>
   </div>
 </nav></div></header>
 
@@ -172,14 +180,16 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
     <p>Qiang Sheng Technical Services L.L.C delivers MEP, HVAC maintenance, civil works, renovation, painting and construction for homes, offices and commercial properties across Dubai.</p>
     <div class="cta">
       <a href="#contact" class="btn btn-m">Request a Free Quote →</a>
-      <a href="tel:+971502961005" class="btn btn-line">📞 Call Now</a>
-      <a href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp</a>
+      <a href="tel:+971502961005" class="btn btn-line">📞 Call Head Office</a>
+      <a href="tel:+971569175612" class="btn btn-line">📞 Call Sales</a>
+      <a href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Head Office</a>
+      <a href="https://wa.me/971569175612?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener" class="btn btn-wa">💬 WhatsApp Sales</a>
     </div>
   </div>
   <div class="hcard">
     <h3>Talk to us today</h3><p>Tell us what you need and we'll arrange a site visit and quotation.</p>
-    <a class="btn btn-wa" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
-    <a class="btn btn-m" href="tel:+971502961005">📞 +971 50 296 1005</a>
+    <div class="dept"><small>Head Office · +971 50 296 1005</small><div class="pair"><a class="btn btn-wa" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 WhatsApp</a><a class="btn btn-m" href="tel:+971502961005">📞 Call</a></div></div>
+    <div class="dept"><small>Sales Department · +971 56 917 5612</small><div class="pair"><a class="btn btn-wa" href="https://wa.me/971569175612?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 WhatsApp</a><a class="btn btn-m" href="tel:+971569175612">📞 Call</a></div></div>
     <a class="btn btn-dark" href="mailto:qiangshengtechnical@gmail.com" style="margin:0">✉ Send an Email</a>
   </div>
 </div></section>
@@ -235,7 +245,7 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
 
 <div class="band"><div class="wrap rv">
   <h2>Need a Technician or a Quotation?</h2><p>Call or message us now. We're happy to help.</p>
-  <div class="cta"><a href="tel:+971502961005" class="btn btn-w">📞 +971 50 296 1005</a><a href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener" class="btn btn-wa">💬 Chat on WhatsApp</a></div>
+  <div class="depts"><div class="dept"><small>Head Office · +971 50 296 1005</small><div class="pair"><a class="btn btn-wa" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 WhatsApp</a><a class="btn btn-w" href="tel:+971502961005">📞 Call</a></div></div><div class="dept"><small>Sales Department · +971 56 917 5612</small><div class="pair"><a class="btn btn-wa" href="https://wa.me/971569175612?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 WhatsApp</a><a class="btn btn-w" href="tel:+971569175612">📞 Call</a></div></div></div>
 </div></div>
 
 <section class="faq" id="faq"><div class="wrap">
@@ -245,7 +255,7 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
     <details><summary>Do you provide maintenance contracts?</summary><p>Yes. We offer maintenance packages for HVAC, electrical, plumbing and general building maintenance with scheduled preventive visits.</p></details>
     <details><summary>Can you handle a complete project from start to finish?</summary><p>Yes. We coordinate civil, MEP and finishing works so you deal with one team only.</p></details>
     <details><summary>Do you work on both residential and commercial properties?</summary><p>Yes. We serve villas, apartments, offices, shops and warehouses in Dubai.</p></details>
-    <details><summary>How can I contact you quickly?</summary><p>The fastest way is WhatsApp or a phone call on +971 50 296 1005. You can also email qiangshengtechnical@gmail.com.</p></details>
+    <details><summary>How can I contact you quickly?</summary><p>The fastest way is WhatsApp or a call: Head Office on +971 50 296 1005 or the Sales Department on +971 56 917 5612. Our landline is +971 4 234 9859. You can also email qiangshengtechnical@gmail.com.</p></details>
   </div>
 </div></section>
 
@@ -253,10 +263,13 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
   <div class="rv">
     <span class="tag">Contact Us</span><h2>Let's Discuss Your Project</h2><p class="lead">Send your requirement and we'll get back to you quickly.</p>
     <div class="info">
-      <a href="tel:+971502961005"><span class="ic">📞</span><span><small>Mobile</small><b>+971 50 296 1005</b></span></a>
-      <a href="https://wa.me/971502961005" target="_blank" rel="noopener"><span class="ic">💬</span><span><small>WhatsApp</small><b>+971 50 296 1005</b></span></a>
+      <a href="tel:+971502961005"><span class="ic">📞</span><span><small>Head Office · Call</small><b>+971 50 296 1005</b></span></a>
+      <a href="https://wa.me/971502961005" target="_blank" rel="noopener"><span class="ic">💬</span><span><small>Head Office · WhatsApp</small><b>+971 50 296 1005</b></span></a>
+      <a href="tel:+971569175612"><span class="ic">📞</span><span><small>Sales Department · Call</small><b>+971 56 917 5612</b></span></a>
+      <a href="https://wa.me/971569175612" target="_blank" rel="noopener"><span class="ic">💬</span><span><small>Sales Department · WhatsApp</small><b>+971 56 917 5612</b></span></a>
+      <a href="tel:+97142349859"><span class="ic">☎</span><span><small>Landline</small><b>+971 4 234 9859</b></span></a>
       <a href="mailto:qiangshengtechnical@gmail.com"><span class="ic">✉</span><span><small>Email</small><b>qiangshengtechnical@gmail.com</b></span></a>
-      <div><span class="ic">📍</span><span><small>Address</small><b>Dubai, United Arab Emirates</b></span></div>
+      <div><span class="ic">📍</span><span><small>Address</small><b style="word-break:normal">Office No. 202, Al Muhairbi Building, Al Garhoud, Dubai, UAE</b></span></div>
     </div>
   </div>
   <form id="form" class="rv">
@@ -264,7 +277,8 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
     <input id="e" type="email" placeholder="Email address (optional)">
     <select id="s"></select>
     <textarea id="m" placeholder="Describe your requirement…"></textarea>
-    <button class="btn btn-wa" type="submit" style="justify-content:center">💬 Send Request via WhatsApp</button>
+    <button class="btn btn-wa" type="button" id="wahq" style="justify-content:center">💬 Send via WhatsApp · Head Office</button>
+    <button class="btn btn-wa" type="button" id="wasales" style="justify-content:center">💬 Send via WhatsApp · Sales Department</button>
     <button class="btn btn-dark" type="button" id="mailbtn" style="justify-content:center">✉ Send via Email</button>
   </form>
 </div></section>
@@ -274,19 +288,21 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
     <div><a href="#home" class="logo" style="margin-bottom:14px"><img class="logo-img" alt="Qiang Sheng logo"><span><b>Qiang Sheng</b><small>TECHNICAL SERVICES L.L.C</small></span></a><p>Reliable technical, construction and maintenance services in Dubai, United Arab Emirates.</p></div>
     <div><h4>Quick Links</h4><ul><li><a href="#about">About</a></li><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#contact">Contact</a></li></ul></div>
     <div><h4>Services</h4><ul><li><a href="#services">MEP Services</a></li><li><a href="#services">HVAC Maintenance</a></li><li><a href="#services">Civil &amp; Construction</a></li><li><a href="#services">Renovation &amp; Paint</a></li></ul></div>
-    <div><h4>Contact</h4><ul><li>📞 +971 50 296 1005</li><li>✉ qiangshengtechnical@gmail.com</li><li>📍 Dubai, United Arab Emirates</li></ul></div>
+    <div><h4>Contact</h4><ul><li>☎ Landline: <a href="tel:+97142349859">+971 4 234 9859</a></li><li>📞 Head Office: <a href="tel:+971502961005">+971 50 296 1005</a></li><li>📞 Sales: <a href="tel:+971569175612">+971 56 917 5612</a></li><li>✉ qiangshengtechnical@gmail.com</li><li>📍 Office No. 202, Al Muhairbi Building, Al Garhoud, Dubai, UAE</li></ul></div>
   </div>
   <div class="copy">© <span id="yr"></span> Qiang Sheng Technical Services L.L.C. All rights reserved.</div>
 </div></footer>
 
 <div class="fab">
-  <a class="w" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.600 15L2 22l5.200-1.400A10 10 0 1 0 12 2z"/></svg><span>Chat on WhatsApp</span></a>
-  <a class="c" href="tel:+971502961005" aria-label="Call"><span>Call Now</span>📞</a>
+  <a class="w" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener" aria-label="WhatsApp Head Office"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.600 15L2 22l5.200-1.400A10 10 0 1 0 12 2z"/></svg><b class="bd">HO</b><span>WhatsApp Head Office</span></a>
+  <a class="w" href="https://wa.me/971569175612?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener" aria-label="WhatsApp Sales"><svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 2a10 10 0 0 0-8.600 15L2 22l5.200-1.400A10 10 0 1 0 12 2z"/></svg><b class="bd">S</b><span>WhatsApp Sales</span></a>
+  <a class="c" href="tel:+971502961005" aria-label="Call Head Office">📞<b class="bd">HO</b><span>Call Head Office</span></a>
+  <a class="c" href="tel:+971569175612" aria-label="Call Sales">📞<b class="bd">S</b><span>Call Sales</span></a>
 </div>
 
 <script>
 /* ================= CONFIGURATION – EDIT HERE ================= */
-const PHONE="971502961005", EMAIL="qiangshengtechnical@gmail.com";
+const PHONE="971502961005", SALES="971569175612", EMAIL="qiangshengtechnical@gmail.com";
 
 /* LOGO: leave "" to use the logo embedded in this file (works anywhere).
    To load your logo from a link instead, paste its direct image URL, e.g. "https://yourdomain.com/logo.png" */
@@ -344,7 +360,7 @@ const S=[
 const F={all:"All",core:"Core Services",mep:"MEP & Systems",reno:"Renovation & Fit-out",civil:"Civil & Outdoor"};
 const cEl=document.getElementById("cards"),fEl=document.getElementById("filters"),sel=document.getElementById("s");
 function render(f){
- cEl.innerHTML=S.filter(x=>f=="all"||x[3]==f).map(x=>`<article class="card"><div class="ph">${x[1]}<img loading="lazy" src="${IMG[x[2]]}" alt="${x[0]}" onerror="this.remove()"><em>${F[x[3]]}</em></div><div class="bd"><h3>${x[0]}</h3><p>${x[4]}</p><ul>${x[5].map(i=>`<li>${i}</li>`).join("")}</ul><a class="more" target="_blank" rel="noopener" href="https://wa.me/${PHONE}?text=${encodeURIComponent("Hello, I'm interested in "+x[0])}">Enquire on WhatsApp →</a></div></article>`).join("");
+ cEl.innerHTML=S.filter(x=>f=="all"||x[3]==f).map(x=>`<article class="card"><div class="ph">${x[1]}<img loading="lazy" src="${IMG[x[2]]}" alt="${x[0]}" onerror="this.remove()"><em>${F[x[3]]}</em></div><div class="bd"><h3>${x[0]}</h3><p>${x[4]}</p><ul>${x[5].map(i=>`<li>${i}</li>`).join("")}</ul><div class="more2"><small>Enquire on WhatsApp</small><div><a target="_blank" rel="noopener" href="https://wa.me/${PHONE}?text=${encodeURIComponent("Hello, I'm interested in "+x[0])}">💬 Head Office</a><a target="_blank" rel="noopener" href="https://wa.me/${SALES}?text=${encodeURIComponent("Hello, I'm interested in "+x[0])}">💬 Sales</a></div></div></div></article>`).join("");
 }
 fEl.innerHTML=Object.entries(F).map(([k,v])=>`<button class="chip${k=="all"?" on":""}" data-f="${k}">${v}</button>`).join("");
 fEl.onclick=e=>{const b=e.target.closest(".chip");if(!b)return;fEl.querySelectorAll(".chip").forEach(c=>c.classList.remove("on"));b.classList.add("on");render(b.dataset.f)};
@@ -353,6 +369,8 @@ sel.innerHTML='<option value="">Select a service</option>'+S.map(x=>`<option>${x
 
 const msg=()=>`Hello, my name is ${n.value}.\nPhone: ${p.value}\nEmail: ${e.value||"-"}\nService: ${s.value||"General enquiry"}\nDetails: ${m.value||"-"}`;
 form.onsubmit=ev=>{ev.preventDefault();window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg())}`,"_blank")};
+const sendWA=num=>{if(!form.reportValidity())return;window.open(`https://wa.me/${num}?text=${encodeURIComponent(msg())}`,"_blank")};
+wahq.onclick=()=>sendWA(PHONE);wasales.onclick=()=>sendWA(SALES);
 mailbtn.onclick=()=>{if(!form.reportValidity())return;location.href=`mailto:${EMAIL}?subject=${encodeURIComponent("Service enquiry: "+(s.value||"General"))}&body=${encodeURIComponent(msg())}`};
 document.getElementById("yr").textContent=new Date().getFullYear();
 document.querySelectorAll(".links a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".links").classList.remove("open")));
