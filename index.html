@@ -135,6 +135,21 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
 .links.open{transform:none}.burger{display:block}}
 @media(max-width:600px){section{padding:62px 0}.steps,.fgrid,.why-grid,.checks,form .row{grid-template-columns:1fr}
 .topbar .wrap{justify-content:center;text-align:center}.hero{padding:80px 0}.logo b{font-size:1.15rem}.logo small{font-size:.55rem}.about-img::before{display:none}}
+
+.gallery{background:#fff}
+.gview{overflow:hidden;margin:40px -10px 0;border-radius:18px}
+.gtrack{display:flex;--pv:3}
+.slide{flex:0 0 calc(100% / var(--pv));padding:0 10px}
+.sl{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:18px;background:linear-gradient(135deg,var(--mdark),var(--m2));display:grid;place-items:center;font-size:3.4rem}
+.sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.sl::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(74,11,14,.85),transparent 50%)}
+.sl .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:18px 20px;color:#fff}
+.cap small{display:block;font:600 .68rem 'Poppins';letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.cap b{font:600 1.35rem 'Oswald';text-transform:uppercase;letter-spacing:.03em}
+.gctl{display:flex;justify-content:center;align-items:center;gap:16px;margin-top:26px}
+.gctl button{width:46px;height:46px;border-radius:50%;border:2px solid var(--m);background:#fff;color:var(--m);font-size:1.2rem;cursor:pointer;transition:.25s}
+.gctl button:hover{background:var(--m);color:#fff}
+.gcount{font:600 .9rem 'Poppins';color:var(--muted);min-width:70px;text-align:center}
 </style>
 </head>
 <body>
@@ -145,7 +160,7 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
   <a href="#home" class="logo"><img class="logo-img" alt="Qiang Sheng logo"><span><b>Qiang Sheng</b><small>TECHNICAL SERVICES L.L.C</small></span></a>
   <button class="burger" aria-label="Menu" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
   <div class="links">
-    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#process">Process</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
     <a class="btn btn-wa" style="padding:10px 20px" href="https://wa.me/971502961005?text=Hello%20Qiang%20Sheng%2C%20I%20need%20a%20quotation" target="_blank" rel="noopener">💬 WhatsApp</a>
   </div>
 </nav></div></header>
@@ -188,6 +203,12 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
   <div class="center rv"><span class="tag">What We Do</span><h2>Our Technical Services</h2><p class="lead">Complete solutions across every discipline of building, fit-out and facility maintenance.</p></div>
   <div class="filters" id="filters"></div>
   <div class="cards" id="cards"></div>
+</div></section>
+
+<section class="gallery" id="gallery"><div class="wrap">
+  <div class="center rv"><span class="tag">Gallery</span><h2>Our Services in Pictures</h2><p class="lead">A quick look at every service we offer.</p></div>
+  <div class="gview" id="gview" aria-label="Services slideshow"><div class="gtrack" id="gtrack"></div></div>
+  <div class="gctl"><button id="gprev" aria-label="Previous">‹</button><span class="gcount" id="gcount"></span><button id="gnext" aria-label="Next">›</button></div>
 </div></section>
 
 <section class="process" id="process"><div class="wrap">
@@ -274,13 +295,25 @@ const LOGO_URL="";
 /* IMAGES: one direct image URL per service. Replace any link with your own photo URL (JPG/PNG/WebP).
    The current links are keyword-based placeholder photos; if an image fails to load, a maroon icon tile is shown instead. */
 const ph=(k,n)=>`https://loremflickr.com/800/560/${k}?lock=${n}`;
+const GH="https://raw.githubusercontent.com/Haseeb4327/Qiang-Sheng-Website/refs/heads/main/";
 const IMG={
  hero:ph("dubai,skyline",11), about:ph("engineer,construction",12),
- mep:ph("electrician,pipes",21), hvac:ph("air,conditioner",22), reno:ph("renovation,interior",23), maint:ph("maintenance,repair",24),
- civil:ph("construction,concrete",25), paint:ph("painting,wall",26), constr:ph("construction,building",27),
- elec:ph("electrician,wiring",28), plumb:ph("plumbing,plumber",29), fire:ph("firefighting,extinguisher",30),
- fit:ph("office,interior",31), floor:ph("tiles,floor",32), water:ph("roof,waterproofing",33), alu:ph("glass,window",34),
- land:ph("landscaping,garden",35), elv:ph("cctv,camera",36)
+ alu:GH+"aluminuglasssteelworks.jpeg?token=GHSAT0AAAAAAEORBJVBIGJ465GNLA7IYSUA2XHBJLA",
+ civil:GH+"civilworks.webp?token=GHSAT0AAAAAAEORBJVAMT5NESCWUAFQQTCK2XHBLZA",
+ constr:GH+"constructionworks.jpeg?token=GHSAT0AAAAAAEORBJVAVAGKJGUEN4LD5QP22XHBMHQ",
+ elec:GH+"electricalworks.jpeg?token=GHSAT0AAAAAAEORBJVAUOP2MWTSNHAQY7B22XHBMVQ",
+ elv:GH+"elvcctvsecurityworks.jpeg?token=GHSAT0AAAAAAEORBJVAPBZ2VAMV2QV76D4Y2XHBM7Q",
+ fire:GH+"firefightingandalarmworks.jpeg?token=GHSAT0AAAAAAEORBJVBHX5CPAQOL3WY2UW42XHBNQA",
+ floor:GH+"floor%20tilingworks.jpeg?token=GHSAT0AAAAAAEORBJVAN3E2PVWXUTOG4JAY2XHBOCQ",
+ hvac:GH+"hvacmaint.webp?token=GHSAT0AAAAAAEORBJVAJPFNIYPK4636HH742XHBOSA",
+ fit:GH+"interiorfitoutworks.jpeg?token=GHSAT0AAAAAAEORBJVBRDJUYW3QEAUTQMFA2XHBPDQ",
+ land:GH+"landscapingandpools.jpeg?token=GHSAT0AAAAAAEORBJVBWMKTQOIHKKTRD6Z22XHBPWQ",
+ maint:GH+"maintenanceworks.jpeg?token=GHSAT0AAAAAAEORBJVAMMJTBGZSYHCSJKCS2XHBQDQ",
+ mep:GH+"mep.jpeg?token=GHSAT0AAAAAAEORBJVAKHSJU6XXEMF66FI42XHBQPA",
+ paint:GH+"paintowkrs.webp?token=GHSAT0AAAAAAEORBJVBFYN5ALPIPFNN3PUO2XHBQZA",
+ plumb:GH+"plimbing%20works.jpeg?token=GHSAT0AAAAAAEORBJVAK35YEMIBTJNKPHAM2XHBRBA",
+ reno:GH+"renovation%20services.jpeg?token=GHSAT0AAAAAAEORBJVAKNIFFGTIGTBL4E7A2XHBRMA",
+ water:GH+"waterproofinginsulation.webp?token=GHSAT0AAAAAAEORBJVAEZ6EWSVIGSFHPWRQ2XHBRVA"
 };
 /* ============================================================= */
 
@@ -325,6 +358,23 @@ document.getElementById("yr").textContent=new Date().getFullYear();
 document.querySelectorAll(".links a").forEach(a=>a.addEventListener("click",()=>document.querySelector(".links").classList.remove("open")));
 const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll(".rv").forEach(el=>io.observe(el));
+/* ===== Auto-sliding gallery (all slides share one fixed 4:3 size; photos are center-cropped) ===== */
+(function(){
+ const tr=document.getElementById("gtrack"),n=S.length;
+ const mk=x=>`<div class="slide"><div class="sl">${x[1]}<img src="${IMG[x[2]]}" alt="${x[0]}" loading="lazy" onerror="this.remove()"><div class="cap"><small>Service</small><b>${x[0]}</b></div></div></div>`;
+ tr.innerHTML=S.map(mk).join("")+S.slice(0,3).map(mk).join("");
+ let i=0,pv=3,timer;
+ const cnt=document.getElementById("gcount");
+ const pos=(anim)=>{tr.style.transition=anim?"transform .7s ease":"none";tr.style.transform=`translateX(-${i*100/pv}%)`;cnt.textContent=(i%n+1)+" / "+n};
+ const perView=()=>{pv=innerWidth<640?1:innerWidth<1000?2:3;tr.style.setProperty("--pv",pv);pos(false)};
+ const next=()=>{i++;pos(true);if(i>=n)setTimeout(()=>{i=0;pos(false)},720)};
+ const prev=()=>{if(i<=0){i=n;pos(false);tr.offsetWidth}i--;pos(true)};
+ const start=()=>{stop();timer=setInterval(next,3000)},stop=()=>clearInterval(timer);
+ document.getElementById("gnext").onclick=()=>{next();start()};
+ document.getElementById("gprev").onclick=()=>{prev();start()};
+ const v=document.getElementById("gview");v.onmouseenter=stop;v.onmouseleave=start;
+ addEventListener("resize",perView);perView();start();
+})();
 </script>
 </body>
 </html>
