@@ -137,10 +137,10 @@ footer .logo b{color:#fff}footer .logo small{color:#bda9a6}footer .logo img{back
 .topbar .wrap{justify-content:center;text-align:center}.hero{padding:80px 0}.logo b{font-size:1.15rem}.logo small{font-size:.55rem}.about-img::before{display:none}}
 
 .gallery{background:#fff}
-.gview{overflow:hidden;margin:40px -10px 0;border-radius:18px}
+.gview{overflow:hidden;margin:40px -10px 0;border-radius:18px}.gallery .wrap{width:min(1320px,94%)}.gallery .cap b{font-size:1.6rem}
 .gtrack{display:flex;--pv:3}
 .slide{flex:0 0 calc(100% / var(--pv));padding:0 10px}
-.sl{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:18px;background:linear-gradient(135deg,var(--mdark),var(--m2));display:grid;place-items:center;font-size:3.4rem}
+.sl{position:relative;aspect-ratio:16/11;overflow:hidden;border-radius:18px;background:linear-gradient(135deg,var(--mdark),var(--m2));display:grid;place-items:center;font-size:3.4rem}
 .sl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .sl::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(74,11,14,.85),transparent 50%)}
 .sl .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:18px 20px;color:#fff}
@@ -297,7 +297,7 @@ const LOGO_URL="";
 const ph=(k,n)=>`https://loremflickr.com/800/560/${k}?lock=${n}`;
 const GH="https://raw.githubusercontent.com/Haseeb4327/Qiang-Sheng-Website/refs/heads/main/";
 const IMG={
- hero:ph("dubai,skyline",11), about:ph("engineer,construction",12),
+ hero:ph("dubai,skyline",11), about:"https://raw.githubusercontent.com/Haseeb4327/Qiang-Sheng-Website/refs/heads/main/technicalservicesmain.jpeg",
  alu:GH+"aluminuglasssteelworks.jpeg",
  civil:GH+"civilworks.webp",
  constr:GH+"constructionworks.jpeg",
@@ -366,7 +366,7 @@ document.querySelectorAll(".rv").forEach(el=>io.observe(el));
  let i=0,pv=3,timer;
  const cnt=document.getElementById("gcount");
  const pos=(anim)=>{tr.style.transition=anim?"transform .7s ease":"none";tr.style.transform=`translateX(-${i*100/pv}%)`;cnt.textContent=(i%n+1)+" / "+n};
- const perView=()=>{pv=innerWidth<640?1:innerWidth<1000?2:3;tr.style.setProperty("--pv",pv);pos(false)};
+ const perView=()=>{pv=innerWidth<1000?1:2;tr.style.setProperty("--pv",pv);pos(false)};
  const next=()=>{i++;pos(true);if(i>=n)setTimeout(()=>{i=0;pos(false)},720)};
  const prev=()=>{if(i<=0){i=n;pos(false);tr.offsetWidth}i--;pos(true)};
  const start=()=>{stop();timer=setInterval(next,3000)},stop=()=>clearInterval(timer);
